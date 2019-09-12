@@ -1,0 +1,57 @@
+@import "colors";
+
+.header {
+  $gradient-opacity: 0.75;
+
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(rgba(black, 0.5), rgba($green-light-color, $gradient-opacity)), center / cover no-repeat url("img/hero.jpg");
+  color: $text-light-color;
+
+  .header--nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5em;
+    position: fixed;
+    display: flex;
+    flex-flow: row;
+    background: linear-gradient(rgba(black, 0.5), transparent);
+  }
+
+  .header--logo {
+    $size: 5em;
+
+    width: $size;
+    height: $size;
+    display: inline-block;
+    background: center / contain no-repeat url("img/logo.png");
+  }
+
+  .header--links {
+    margin: 0 2em 0 auto;
+    padding: 0;
+
+    .header--link-item {
+      margin: 1.5em 0;
+      display: inline-block;
+
+      .header--link {
+        color: $text-light-color;
+        text-decoration: none;
+        padding: 1.5em;
+      }
+    }
+  }
+
+  .header--info {
+    width: 60%;
+    align-self: center;
+    margin: auto;
+
+    .header--info-title {
+      font-weight: 400;
+      font-size: 2em;
+    }
+  }
+}

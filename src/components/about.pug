@@ -1,0 +1,36 @@
+mixin about-section(title, img, link)
+  article.about-section
+    img.about-section--image(src=img)
+    h3.about-section--title= title
+    span.about-section--body
+      block
+    a.about-section--read-more(href=link) Se mere >>
+
+mixin about()
+  section.about#about
+    h2.about--title Om AspIT
+    section.about--sections
+      +about-section("Afklaring", "img/afklaring.jpg", "#")
+        p
+          | A falsis, cannabis flavum quadra. Fortiss ire in cubiculum! Cum mensa persuadere, omnes dominaes gratia audax,
+          | fortis frondatores. Victrix cresceres, tanquam altus urbs. Glutens peregrinationes in tubinga! A falsis, musa
+          | secundus abnoba.
+        p
+          | Azureus candidatuss ducunt ad detrius. A falsis, urbs clemens zelus. Pol. Ecce, detrius! Ecce, pius
+          | apolloniates! Unda mechanice ducunt ad placidus orgia.
+      +about-section("Uddannelsen", "img/undervisning.jpg", "#")
+        p
+          | A falsis, cannabis flavum quadra. Fortiss ire in cubiculum! Cum mensa persuadere, omnes dominaes gratia audax,
+          | fortis frondatores. Victrix cresceres, tanquam altus urbs. Glutens peregrinationes in tubinga! A falsis, musa
+          | secundus abnoba.
+        p
+          | Azureus candidatuss ducunt ad detrius. A falsis, urbs clemens zelus. Pol. Ecce, detrius! Ecce, pius
+          | apolloniates! Unda mechanice ducunt ad placidus orgia.
+      +about-section("Praktik", "img/arbejde.jpg", "#")
+        p
+          | A falsis, cannabis flavum quadra. Fortiss ire in cubiculum! Cum mensa persuadere, omnes dominaes gratia audax,
+          | fortis frondatores. Victrix cresceres, tanquam altus urbs. Glutens peregrinationes in tubinga! A falsis, musa
+          | secundus abnoba.
+        p
+          | Azureus candidatuss ducunt ad detrius. A falsis, urbs clemens zelus. Pol. Ecce, detrius! Ecce, pius
+          | apolloniates! Unda mechanice ducunt ad placidus orgia.

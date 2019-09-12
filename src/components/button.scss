@@ -1,0 +1,30 @@
+@import "colors";
+
+.button {
+  $normal-shadow-offset: 0.15em;
+  $hover-shadow-offset: 0.4em;
+  $hover-transform-offset: 0.15em;
+  $active-shadow-offset: 0;
+  $shadow-color: rgba(#272727, 0.35);
+
+  padding: 1em 1.5em;
+  background-color: $green-light-color;
+  display: inline-block;
+  color: $text-light-color;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: all 0.15s;
+
+  box-shadow: -$normal-shadow-offset $normal-shadow-offset 0 $shadow-color;
+
+  &:hover {
+    box-shadow: -$hover-shadow-offset $hover-shadow-offset 0 $shadow-color;
+    transform: translate($hover-transform-offset, -$hover-transform-offset);
+  }
+
+  &:active {
+    box-shadow: -$active-shadow-offset $active-shadow-offset 0 $shadow-color;
+    transform: translate(0, 0);
+  }
+}

@@ -1,0 +1,42 @@
+@import "colors";
+
+.about {
+  margin: 4em 0;
+
+  .about--title {
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .about--sections {
+    display: flex;
+    flex-flow: row;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.about-section {
+  display: block;
+  margin: 1em;
+
+  & + .about-section {
+    margin-left: 0;
+  }
+
+  .about-section--image {
+    width: 100%;
+    height: 12em;
+    object-fit: cover;
+  }
+
+  .about-section--title {
+    color: $green-dark-color
+  }
+
+  .about-section--read-more {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid $text-dark-color;
+  }
+}

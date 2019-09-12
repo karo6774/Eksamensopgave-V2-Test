@@ -1,0 +1,13 @@
+@import "components/index";
+@import "colors";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-dark-color;
+}
