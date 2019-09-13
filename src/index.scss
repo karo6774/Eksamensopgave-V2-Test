@@ -6,8 +6,16 @@ html, body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
   background-color: $background-color;
   color: $text-dark-color;
+}
+
+.page-section {
+  padding: 3em 0;
 }
