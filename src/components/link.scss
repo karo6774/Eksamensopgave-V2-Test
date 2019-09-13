@@ -1,0 +1,11 @@
+@import "colors";
+
+.continue-link {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid;
+
+  &:after {
+    content: " >>"
+  }
+}
