@@ -1,18 +1,33 @@
-mixin news-card(image, clazz)
+mixin news-card(image, clazz, name)
   article(class=clazz).news-card
-    img(src=image).news-card--image
-    h3.news-card--headline
-      block
+    a.news-card--link(href="#")
+      img(src=image).news-card--image
+      h3.news-card--headline
+        block
 
 mixin news()
-  section.news#news
-    +news-card("img/nyheder/cowi.png", "news-card__1")
-      | Samfundsøkonomisk analyse af AspIT
-    +news-card("img/nyheder/elev_alene_i_amterdam.jpg", "news-card__2")
-      | Elev alene på ophold i Amsterdam
-    +news-card("img/nyheder/aspitskolernesdak.PNG", "news-card__3")
-      | Husk AspIT skolernes dag den 2. september
-    +news-card("img/nyheder/hmmm.PNG", "news-card__4")
-      | Erhvervsleder melder klart ud
-    +news-card("img/nyheder/csis.jpg", "news-card__5")
-      | CSIS indstillet til årets AspIT pris
+  section.news
+    h2.news--title Nyheder
+    div.news--container
+      +news-card("img/nyheder/cowi.png", "news-card__1")
+        | Samfundsøkonomisk analyse af AspIT
+      +news-card("img/nyheder/elev_alene_i_amterdam.jpg", "news-card__2")
+        | Elev alene på ophold i Amsterdam
+      +news-card("img/nyheder/aspitskolernesdak.PNG", "news-card__3")
+        | Husk AspIT skolernes dag den 2. september
+      +news-card("img/nyheder/hmmm.PNG", "news-card__4")
+        | Erhvervsleder melder klart ud
+      +news-card("img/nyheder/csis.jpg", "news-card__5")
+        | CSIS indstillet til årets AspIT pris
+      div.news--social-media
+        a.news--social-link.news--social-link__facebook(href="#")
+        a.news--social-link.news--social-link__linkedin(href="#")
+      div.news--newsletter.newsletter-form
+        h3.newsletter-form--title Tilmeld nyhedsbrev
+        span Få nyheder fra AspIT direkte i din indbakke
+        div.newsletter-form--form
+          input.newsletter-form--input(placeholder="Navn")
+          input.newsletter-form--input(placeholder="Email")
+          input.newsletter-form--submit.button(type="submit" value="Tilmeld")
+      div.news--more-news
+        a.continue-link(href="#") Se flere nyheder
