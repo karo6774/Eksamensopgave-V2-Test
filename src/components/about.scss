@@ -5,11 +5,23 @@
     text-align: center;
   }
 
+  @media only screen and (max-width: 768px) {
+    .about--scroll-container {
+      scrollbar-width: thin;
+      overflow-x: scroll;
+    }
+  }
+
   .about--sections {
     display: flex;
     flex-flow: row;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 768px) {
+      width: 1200px;
+      margin: 0;
+    }
   }
 }
 
