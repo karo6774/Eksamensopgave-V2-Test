@@ -1,0 +1,18 @@
+mixin news-card(image, clazz)
+  article(class=clazz).news-card
+    img(src=image).news-card--image
+    h3.news-card--headline
+      block
+
+mixin news()
+  section.news#news
+    +news-card("img/nyheder/cowi.png", "news-card__1")
+      | Samfundsøkonomisk analyse af AspIT
+    +news-card("img/nyheder/elev_alene_i_amterdam.jpg", "news-card__2")
+      | Elev alene på ophold i Amsterdam
+    +news-card("img/nyheder/aspitskolernesdak.PNG", "news-card__3")
+      | Husk AspIT skolernes dag den 2. september
+    +news-card("img/nyheder/hmmm.PNG", "news-card__4")
+      | Erhvervsleder melder klart ud
+    +news-card("img/nyheder/csis.jpg", "news-card__5")
+      | CSIS indstillet til årets AspIT pris
