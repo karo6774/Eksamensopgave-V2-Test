@@ -10,7 +10,7 @@ const html = () =>
         .pipe(dest("dist"));
 
 const css = () =>
-    src("src/*.scss")
+    src("src/index.scss")
         .pipe(sass())
         .pipe(cssnano())
         .pipe(dest("dist"));
